@@ -1,16 +1,28 @@
-# React + Vite
+# ShopSmart AI — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React frontend for ShopSmart AI, a RAG-powered shopping assistant. Lets users search a product catalog using natural language and see AI-generated, retrieval-grounded recommendations.
 
-Currently, two official plugins are available:
+**Live demo:** [shop-smart-frontend-ecru.vercel.app](https://shop-smart-frontend-ecru.vercel.app)
+**Backend repo:** [ShopSmart-AI](https://github.com/VishRoy/ShopSmart-AI)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech stack
 
-## React Compiler
+- React (Vite)
+- Plain CSS (no UI library)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Running locally
 
-## Expanding the ESLint configuration
+```bash
+npm install
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Add a .env file with:
+# VITE_API_URL=http://127.0.0.1:8000   (or your deployed backend URL)
+
+npm run dev
+```
+
+The backend must be running separately — see the [ShopSmart-AI](https://github.com/VishRoy/ShopSmart-AI) repo for setup instructions.
+
+## Deployment
+
+Deployed on Vercel. The `VITE_API_URL` environment variable is set in Vercel's project settings (not committed to the repo) and points to the backend hosted on Hugging Face Spaces.
